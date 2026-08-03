@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Abid Ali — Computer Science Portfolio</title>
+<meta name="description" content="Portfolio of Abid Ali, Computer Science student — projects, skills, and education." />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-logo">❤️Aabi<span class="dot">.</span></a>
+  <nav class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="assets/resume/resume.pdf" class="btn btn-small" download>Resume ↓</a>
+  <button class="nav-burger" id="navBurger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="nav-mobile" id="navMobile">
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#education">Education</a>
+  <a href="#contact">Contact</a>
+  <a href="assets/resume/resume.pdf" class="btn btn-small" download>Résumé ↓</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-content">
+    <p class="eyebrow">// hello world, i'm</p>
+    <h1 class="hero-title">
+      Abid <span class="highlight">Ali</span>
+    </h1>
+    <p class="hero-subtitle">
+      Passionate Full Stack Developer and <span class="underline-squiggle">Computer Science</span>,
+      <span class="underline-squiggle">Students</span> who enjoys transforming complex problems into simple,
+      user-friendly digital solutions.
+    </p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">See my work</a>
+      <a href="#contact" class="btn btn-ghost">Let's talk</a>
+    </div>
+    <p class="hero-hint">drag the scene → scroll for more ✦</p>
+  </div>
+
+  <div class="hero-visual" id="heroVisual">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
+    <div class="hero-photo-wrap" id="heroPhotoWrap">
+      <div class="hero-photo-glow"></div>
+      <img src="assets/images/profile.png" alt="Abid Ali" class="hero-photo" />
+      <span class="hero-photo-badge">● Open to internships</span>
+    </div>
+  </div>
+
+  <div class="scroll-cue" aria-hidden="true">
+    <span></span>
+  </div>
+</section>
+
+<main>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="section-head">
+      <p class="eyebrow">about</p>
+      <h2>The short version</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I'm <strong>Abid</strong> — a Computer Science student in my final stretch,
+          currently chasing the line between "it compiles" and "it's actually good."
+          I like systems that are simple to explain and hard to break, interfaces that
+          feel obvious in hindsight, and the particular joy of a test suite turning green.
+        </p>
+        <p>
+          Outside of class you'll find me prototyping side projects, breaking things on
+          purpose to understand how they work, and slowly building the playful little
+          3D scene you scrolled past at the top of this page.
+        </p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num" data-count="8">0</span>
+            <span class="stat-label">Semesters down</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="12">0</span>
+            <span class="stat-label">Projects shipped</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="6">0</span>
+            <span class="stat-label">Languages used</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-card" id="aboutTilt">
+        <div class="about-card-inner">
+          <div class="badge-row">
+            <span class="badge">Open to internships</span>
+          </div>
+          <ul class="quick-facts">
+            <li><span>📍</span> KPK Mardan</li>
+            <li><span>🎓</span> B.S. Computer Science, Sem 8th</li>
+            <li><span>💬</span> English · Urdu · Poshto</li>
+            <li><span>⚡</span> Currently learning: Full Stack Web Dev..</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section skills" id="skills">
+    <div class="section-head">
+      <p class="eyebrow">Skills</p>
+      <h2>What I build with</h2>
+    </div>
+
+    <div class="skills-grid" id="skillsGrid">
+      <!-- populated by JS for stagger animation, but here's the static fallback -->
+      <div class="skill-card" data-tilt><span class="skill-icon">🧩</span><h3>Languages</h3><p>Python, Java, C++, JavaScript</p></div>
+      <div class="skill-card" data-tilt><span class="skill-icon">🌐</span><h3>Web</h3><p>React, Node.js, HTML/CSS</p></div>
+      <div class="skill-card" data-tilt><span class="skill-icon">🗄️</span><h3>Data</h3><p>SQL, MongoDB, Pandas</p></div>
+      <div class="skill-card" data-tilt><span class="skill-icon">☁️</span><h3>Tools &amp; Cloud</h3><p>Git, Docker, AWS basics</p></div>
+      <div class="skill-card" data-tilt><span class="skill-icon">🧠</span><h3>CS Fundamentals</h3><p>DSA, OOP, OS, Networks</p></div>
+      <div class="skill-card" data-tilt><span class="skill-icon">🎨</span><h3>Design</h3><p>Figma, UI prototyping</p></div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section projects" id="projects">
+    <div class="section-head">
+      <p class="eyebrow">Projects</p>
+      <h2>Things I've shipped</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="project-card" data-tilt>
+        <div class="project-glow"></div>
+        <span class="project-num">01</span>
+        <h3>Project Name One</h3>
+        <p>One line on the problem it solves and the result — e.g. "A real-time chat app handling 500+ concurrent users."</p>
+        <div class="tag-row">
+          <span class="tag">React</span><span class="tag">Node.js</span><span class="tag">Socket.io</span>
+        </div>
+        <div class="project-links">
+          <a href="#">Live demo →</a>
+          <a href="#">Source ↗</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-tilt>
+        <div class="project-glow"></div>
+        <span class="project-num">02</span>
+        <h3>Project Name Two</h3>
+        <p>One line on the problem it solves and the result — e.g. "ML model predicting X with 92% accuracy."</p>
+        <div class="tag-row">
+          <span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">Pandas</span>
+        </div>
+        <div class="project-links">
+          <a href="#">Live demo →</a>
+          <a href="#">Source ↗</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-tilt>
+        <div class="project-glow"></div>
+        <span class="project-num">03</span>
+        <h3>Project Name Three</h3>
+        <p>One line on the problem it solves and the result — e.g. "Mobile app with 1k+ downloads on Play Store."</p>
+        <div class="tag-row">
+          <span class="tag">Flutter</span><span class="tag">Firebase</span>
+        </div>
+        <div class="project-links">
+          <a href="#">Live demo →</a>
+          <a href="#">Source ↗</a>
+        </div>
+      </article>
+
+      <article class="project-card" data-tilt>
+        <div class="project-glow"></div>
+        <span class="project-num">04</span>
+        <h3>Project Name Four</h3>
+        <p>One line on the problem it solves and the result — swap this for your own project.</p>
+        <div class="tag-row">
+          <span class="tag">C++</span><span class="tag">DSA</span>
+        </div>
+        <div class="project-links">
+          <a href="#">Live demo →</a>
+          <a href="#">Source ↗</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section education" id="education">
+    <div class="section-head">
+      <p class="eyebrow">Education</p>
+      <h2>How I got here</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2022 — Present</span>
+          <h3>B.S. in Computer Science</h3>
+          <p>Abdul Wali Khan University Mardan · Semester 8 · CGPA — 3.56/4.00 —</p>
+          <p class="timeline-detail">Relevant coursework: Data Structures &amp; Algorithms, Operating Systems, Databases, Computer Networks, Software Engineering.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">2020 — 2022</span>
+          <h3>Higher Secondary (Computer Science)</h3>
+          <p>Govt Post Graduate College Mardan · Percentage 88 / A</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">Certifications</span>
+          <h3>Online Courses &amp; Certs</h3>
+          <p class="timeline-detail">E-Commerce from NAVTC, English Works State Devolpment Organization US, eCommerce from Courseera, Graphic Desigining from Digiskills</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="contact-blob"></div>
+    <div class="section-head">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's build something</h2>
+      <p class="section-sub">Internship offer, project idea, or just want to talk tech? My inbox is open.</p>
+    </div>
+
+    <div class="contact-grid">
+      <form class="contact-form" id="contactForm">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell me about it..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send message ✦</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+
+      <div class="contact-side">
+        <a class="contact-link" href="mailto:jordan.casey@example.com">
+          <span class="contact-link-label">Email</span>
+          <span class="contact-link-value">abidalistd@gmail.com</span>
+        </a>
+        <a class="contact-link" href="https://github.com/yourusername" target="_blank" rel="noopener">
+          <span class="contact-link-label">GitHub</span>
+          <span class="contact-link-value">github.com/yourusername</span>
+        </a>
+        <a class="contact-link" href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener">
+          <span class="contact-link-label">LinkedIn</span>
+          <span class="contact-link-value">linkedin.com/in/yourusername</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>Designed &amp; built by Abid Ali · <span id="year"></span></p>
+  <a href="#top" class="back-to-top">Back to top ↑</a>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="js/vendor/three.min.js"></script>
+<script src="js/three-scene.js"></script>
+<script src="js/photo-parallax.js"></script>
+<script src="js/tilt.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
